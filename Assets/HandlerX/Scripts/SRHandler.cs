@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SRHandler : MonoBehaviour
+namespace BlacXGames
 {
-    // Start is called before the first frame update
-    void Start()
+    public class SRHandler : MonoBehaviour
     {
-        
-    }
+        private SpriteRenderer _spriteRenderer;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private void Awake() => _spriteRenderer = GetComponent<SpriteRenderer>();
         
+        public void SetSprite(Sprite sprite) => _spriteRenderer.sprite = sprite;
+        public void SetColor(Color color) => _spriteRenderer.color = color;
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
     }
 }
