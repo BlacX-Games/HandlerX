@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TXTHandler : MonoBehaviour
+namespace BlacXGames
 {
-    // Start is called before the first frame update
-    void Start()
+    public class TXTHandler : MonoBehaviour
     {
-        
-    }
+        private Text _text;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private void Awake() => _text = GetComponent<Text>();
         
-    }
+        public void SetText(string text) => _text.text = text;
+        public void SetColor(Color color) => _text.color = color;
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
+    }   
 }
