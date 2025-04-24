@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BTNHandler : MonoBehaviour
+namespace BlacXGames
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BTNHandler : MonoBehaviour
     {
-        
-    }
+        private Button _button;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private void Awake() => _button = GetComponent<Button>();
         
-    }
+        public void SetInteractable(bool state) => _button.interactable = state;
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
+    }   
 }
