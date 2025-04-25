@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace BlacXGames
+namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class TMPHandler : MonoBehaviour

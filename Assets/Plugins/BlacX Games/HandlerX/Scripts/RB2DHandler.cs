@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlacXGames
+namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class RB2DHandler : MonoBehaviour

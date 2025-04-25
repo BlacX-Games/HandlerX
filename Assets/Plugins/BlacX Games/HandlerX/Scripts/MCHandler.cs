@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlacXGames
+namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(MeshCollider))]
     public class MCHandler : MonoBehaviour

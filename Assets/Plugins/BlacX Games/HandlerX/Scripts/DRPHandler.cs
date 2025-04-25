@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BlacXGames
+namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Dropdown))]
     public class DRPHandler : MonoBehaviour
