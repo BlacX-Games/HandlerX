@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(RectTransform))]
     public class RTHandler : MonoBehaviour
     {
         private RectTransform _rectTransform;

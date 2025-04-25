@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(InputField))]
     public class IFHandler : MonoBehaviour
     {
         private InputField _inputField;

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(Image))]
     public class IMGHandler : MonoBehaviour
     {
         private Image _image;

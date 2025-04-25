@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class RBHandler : MonoBehaviour
     {
         private Rigidbody _ridiRigidbody;

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(Text))]
     public class TXTHandler : MonoBehaviour
     {
         private Text _text;

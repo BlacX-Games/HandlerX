@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(SpriteRenderer))]
     public class SRHandler : MonoBehaviour
     {
         private SpriteRenderer _spriteRenderer;

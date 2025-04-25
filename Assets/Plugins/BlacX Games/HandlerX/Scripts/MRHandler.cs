@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(MeshRenderer))]
     public class MRHandler : MonoBehaviour
     {
         private MeshRenderer _meshRenderer;

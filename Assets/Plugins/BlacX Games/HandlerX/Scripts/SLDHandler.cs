@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(Slider))]
     public class SLDHandler : MonoBehaviour
     {
         private Slider _slider;

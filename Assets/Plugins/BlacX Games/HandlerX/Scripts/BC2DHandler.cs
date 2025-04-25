@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(BoxCollider2D))]
     public class BC2DHandler : MonoBehaviour
     {
         private BoxCollider2D _boxCollider;
