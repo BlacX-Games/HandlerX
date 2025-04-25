@@ -1,21 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BlacXGames
 {
     public class SLDHandler : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        private Slider _slider;
 
-        // Update is called once per frame
-        void Update()
-        {
+        private void Awake() => _slider = GetComponent<Slider>();
         
-        }
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
     }   
 }
