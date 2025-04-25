@@ -4,18 +4,14 @@ using UnityEngine;
 
 namespace BlacXGames
 {
+    [RequireComponent(typeof(MeshCollider))]
     public class MCHandler : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        private MeshCollider _meshCollider;
 
-        // Update is called once per frame
-        void Update()
-        {
+        private void Awake() => _meshCollider = GetComponent<MeshCollider>();
         
-        }
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
     }   
 }
