@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class IFHandler : MonoBehaviour
+namespace BlacXGames
 {
-    // Start is called before the first frame update
-    void Start()
+    public class IFHandler : MonoBehaviour
     {
-        
-    }
+        private InputField _inputField;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private void Awake() => _inputField = GetComponent<InputField>();
         
-    }
+        public void SetText(string text) => _inputField.text = text;
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
+    }    
 }
