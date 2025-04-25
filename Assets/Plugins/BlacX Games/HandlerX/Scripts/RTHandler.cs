@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RTHandler : MonoBehaviour
+namespace BlacXGames
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RTHandler : MonoBehaviour
     {
-        
-    }
+        private RectTransform _rectTransform;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake() => _rectTransform = GetComponent<RectTransform>();
+    
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
     }
 }
