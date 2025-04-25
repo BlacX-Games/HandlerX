@@ -6,16 +6,11 @@ namespace BlacXGames
 {
     public class BC2DHandler : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        private BoxCollider2D _boxCollider;
 
-        // Update is called once per frame
-        void Update()
-        {
+        private void Awake() => _boxCollider = GetComponent<BoxCollider2D>();
         
-        }
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
     }   
 }
