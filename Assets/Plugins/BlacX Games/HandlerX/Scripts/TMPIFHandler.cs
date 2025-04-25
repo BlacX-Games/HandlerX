@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TMPIFHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private TMP_InputField _inputField;
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Awake() => _inputField = GetComponent<TMP_InputField>();
         
-    }
+    public void SetText(string text) => _inputField.text = text;
+    public void Activate() => gameObject.SetActive(true);
+    public void Deactivate() => gameObject.SetActive(false);
 }
