@@ -6,16 +6,11 @@ namespace BlacXGames
 {
     public class RB2DHandler : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        private Rigidbody2D _ridiRigidbody;
 
-        // Update is called once per frame
-        void Update()
-        {
+        private void Awake() => _ridiRigidbody = GetComponent<Rigidbody2D>();
         
-        }
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
     }   
 }
