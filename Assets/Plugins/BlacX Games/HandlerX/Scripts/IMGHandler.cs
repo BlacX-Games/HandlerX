@@ -16,5 +16,8 @@ namespace BlacXGames.Plugins.Utilities
         public void SetColor(Color color) => _image.color = color;
         public void Activate() => gameObject.SetActive(true);
         public void Deactivate() => gameObject.SetActive(false);
+        
+        public static void SetSprite(IMGHandler imgHandler, Sprite sprite) => imgHandler.SetSprite(sprite);
+        public static void SetColor(IMGHandler imgHandler, Color color) => imgHandler.SetColor(color);
     }
 }
