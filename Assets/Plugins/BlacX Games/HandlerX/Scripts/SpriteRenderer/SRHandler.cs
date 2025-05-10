@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class SRHandler : MonoBehaviour
+    public class SRHandler : OBJHandler
     {
         private SpriteRenderer _spriteRenderer;
 
@@ -13,7 +13,5 @@ namespace BlacXGames.Plugins.Utilities
         
         public void SetSprite(Sprite sprite) => _spriteRenderer.sprite = sprite;
         public void SetColor(Color color) => _spriteRenderer.color = color;
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }
 }

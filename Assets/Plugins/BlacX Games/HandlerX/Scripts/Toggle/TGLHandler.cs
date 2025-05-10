@@ -7,13 +7,10 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Toggle))]
-    public class TGLHandler : MonoBehaviour
+    public class TGLHandler : OBJHandler
     {
         private Toggle _toggle;
 
         private void Awake() => _toggle = GetComponent<Toggle>();
-        
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }   
 }

@@ -6,14 +6,12 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(InputField))]
-    public class IFHandler : MonoBehaviour
+    public class IFHandler : OBJHandler
     {
         private InputField _inputField;
 
         private void Awake() => _inputField = GetComponent<InputField>();
         
         public void SetText(string text) => _inputField.text = text;
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }    
 }

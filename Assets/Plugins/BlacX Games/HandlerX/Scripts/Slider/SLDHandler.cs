@@ -6,13 +6,10 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Slider))]
-    public class SLDHandler : MonoBehaviour
+    public class SLDHandler : OBJHandler
     {
         private Slider _slider;
 
         private void Awake() => _slider = GetComponent<Slider>();
-        
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }   
 }

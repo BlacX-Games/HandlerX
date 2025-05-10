@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Button))]
-    public class BTNHandler : MonoBehaviour
+    public class BTNHandler : OBJHandler
     {
         private Button _button;
 

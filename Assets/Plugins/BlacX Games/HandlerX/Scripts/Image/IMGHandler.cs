@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Image))]
-    public class IMGHandler : MonoBehaviour
+    public class IMGHandler : OBJHandler
     {
         private Image _image;
         
@@ -14,8 +14,6 @@ namespace BlacXGames.Plugins.Utilities
         
         public void SetSprite(Sprite sprite) => _image.sprite = sprite;
         public void SetColor(Color color) => _image.color = color;
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
         
         public static void SetSprite(IMGHandler imgHandler, Sprite sprite) => imgHandler.SetSprite(sprite);
         public static void SetColor(IMGHandler imgHandler, Color color) => imgHandler.SetColor(color);

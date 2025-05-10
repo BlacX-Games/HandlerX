@@ -6,7 +6,7 @@ using TMPro;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
-    public class TMPHandler : MonoBehaviour
+    public class TMPHandler : OBJHandler
     {
         private TextMeshProUGUI _textMeshProUGUI;
 

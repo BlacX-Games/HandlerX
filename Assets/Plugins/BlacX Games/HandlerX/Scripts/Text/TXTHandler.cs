@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Text))]
-    public class TXTHandler : MonoBehaviour
+    public class TXTHandler : OBJHandler
     {
         private Text _text;
 

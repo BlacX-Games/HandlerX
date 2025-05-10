@@ -6,13 +6,10 @@ using UnityEngine;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(AudioSource))]
-    public class ASHandler : MonoBehaviour
+    public class ASHandler : OBJHandler
     {
         private AudioSource _audioSource;
 
         private void Awake() => _audioSource = GetComponent<AudioSource>();
-        
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }
 }

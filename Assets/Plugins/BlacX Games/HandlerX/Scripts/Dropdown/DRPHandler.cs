@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Dropdown))]
-    public class DRPHandler : MonoBehaviour
+    public class DRPHandler : OBJHandler
     {
         private Dropdown _dropdown;
 

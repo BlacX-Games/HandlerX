@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(MeshRenderer))]
-    public class MRHandler : MonoBehaviour
+    public class MRHandler : OBJHandler
     {
         private MeshRenderer _meshRenderer;
 

@@ -5,13 +5,10 @@ using UnityEngine;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(MeshCollider))]
-    public class MCHandler : MonoBehaviour
+    public class MCHandler : OBJHandler
     {
         private MeshCollider _meshCollider;
 
         private void Awake() => _meshCollider = GetComponent<MeshCollider>();
-        
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }   
 }

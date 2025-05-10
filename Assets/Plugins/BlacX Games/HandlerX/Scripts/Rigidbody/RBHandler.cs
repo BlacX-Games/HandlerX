@@ -5,13 +5,10 @@ using UnityEngine;
 namespace BlacXGames.Plugins.Utilities
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class RBHandler : MonoBehaviour
+    public class RBHandler : OBJHandler
     {
         private Rigidbody _ridiRigidbody;
 
         private void Awake() => _ridiRigidbody = GetComponent<Rigidbody>();
-        
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
     }   
 }
