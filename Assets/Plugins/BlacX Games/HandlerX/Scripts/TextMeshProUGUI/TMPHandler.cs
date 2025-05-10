@@ -14,7 +14,8 @@ namespace BlacXGames.Plugins.Utilities
         
         public void SetText(string text) => _textMeshProUGUI.text = text;
         public void SetColor(Color color) => _textMeshProUGUI.color = color;
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
+        
+        public static void SetText(TMPHandler tMPHandler, string text) => tMPHandler.SetText(text);
+        public static void SetColor(TMPHandler tMPHandler, Color color) => tMPHandler.SetColor(color);
     }
 }
