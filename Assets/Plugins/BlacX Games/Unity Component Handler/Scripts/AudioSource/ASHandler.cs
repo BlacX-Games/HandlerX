@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace BlacXGames.Plugins.Utilities
+namespace BlacXGames.Plugins.Utilities.Uch
 {
     [RequireComponent(typeof(AudioSource))]
     public class ASHandler : OBJHandler

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BlacXGames.Plugins.Utilities
+namespace BlacXGames.Plugins.Utilities.Uch
 {
     [RequireComponent(typeof(Slider))]
     public class SLDHandler : OBJHandler
