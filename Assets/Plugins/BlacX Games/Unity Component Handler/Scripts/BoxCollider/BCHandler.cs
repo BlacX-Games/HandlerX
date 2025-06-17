@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlacXGames.Plugins.Utilities.Uch
+namespace BlacXGames.Plugins.Uch
 {
     [RequireComponent(typeof(BoxCollider))]
     public class BCHandler : OBJHandler

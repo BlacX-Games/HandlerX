@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BlacXGames.Plugins.Utilities.Uch
+namespace BlacXGames.Plugins.Uch
 {
     [RequireComponent(typeof(Toggle))]
     public class TGLHandler : OBJHandler

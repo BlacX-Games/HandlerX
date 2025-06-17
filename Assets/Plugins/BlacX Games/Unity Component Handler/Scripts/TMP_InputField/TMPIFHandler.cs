@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace BlacXGames.Plugins.Utilities.Uch
+namespace BlacXGames.Plugins.Uch
 {
     [RequireComponent(typeof(TMP_InputField))]
     public class TMPIFHandler : OBJHandler

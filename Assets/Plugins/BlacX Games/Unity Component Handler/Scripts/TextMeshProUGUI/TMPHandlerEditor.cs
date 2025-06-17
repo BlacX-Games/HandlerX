@@ -4,7 +4,7 @@ using TMPro;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlacXGames.Plugins.Utilities.Uch.Editor
+namespace BlacXGames.Plugins.Uch.Editor
 {
     public class TMPHandlerEditor : EditorWindow
     {
