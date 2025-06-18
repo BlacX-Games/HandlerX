@@ -10,6 +10,19 @@ namespace BlacXGames.Plugins.Uch
     {
         private Slider _slider;
 
-        private void Awake() => _slider = GetComponent<Slider>();
+        public void Initialize() => _slider = GetComponent<Slider>();
+        private void Awake() => Initialize();
+        
+        public static void InitializeAll()
+        {
+            SLDHandler[] imgHandlers = FindObjectsByType<SLDHandler>(FindObjectsSortMode.None);
+            foreach (SLDHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }   
 }

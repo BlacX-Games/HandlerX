@@ -10,8 +10,8 @@ namespace BlacXGames.Plugins.Uch
     {
         private Image _image;
         
-        private void Awake() => _image = GetComponent<Image>();
-        
+        public void Initialize() => _image = GetComponent<Image>();
+        private void Awake() => Initialize();
         public void SetSprite(Sprite sprite) => _image.sprite = sprite;
         public void SetColor(Color color) => _image.color = color;
         public void SetMaterial(Material material) => _image.material = material;
@@ -39,5 +39,17 @@ namespace BlacXGames.Plugins.Uch
         public static void SetFillAmount(IMGHandler imgHandler, float amount) => imgHandler.SetFillAmount(amount);
         public static void SetFillAmountToMin(IMGHandler imgHandler) => imgHandler.SetFillAmountToMin();
         public static void SetFillAmountToMax(IMGHandler imgHandler) => imgHandler.SetFillAmountToMax();
+        
+        public static void InitializeAll()
+        {
+            IMGHandler[] imgHandlers = FindObjectsByType<IMGHandler>(FindObjectsSortMode.None);
+            foreach (IMGHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }
 }

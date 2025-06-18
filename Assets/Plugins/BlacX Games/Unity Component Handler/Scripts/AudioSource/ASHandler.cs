@@ -10,6 +10,19 @@ namespace BlacXGames.Plugins.Uch
     {
         private AudioSource _audioSource;
 
-        private void Awake() => _audioSource = GetComponent<AudioSource>();
+        public void Initialize() => _audioSource = GetComponent<AudioSource>();
+        private void Awake() => Initialize();
+        
+        public static void InitializeAll()
+        {
+            ASHandler[] asHandlers = FindObjectsByType<ASHandler>(FindObjectsSortMode.None);
+            foreach (ASHandler item in asHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }
 }

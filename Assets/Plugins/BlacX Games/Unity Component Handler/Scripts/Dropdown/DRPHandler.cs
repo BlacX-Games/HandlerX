@@ -10,9 +10,19 @@ namespace BlacXGames.Plugins.Uch
     {
         private Dropdown _dropdown;
 
-        private void Awake() => _dropdown = GetComponent<Dropdown>();
+        public void Initialize() => _dropdown = GetComponent<Dropdown>();
+        private void Awake() => Initialize();
         
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
+        public static void InitializeAll()
+        {
+            DRPHandler[] imgHandlers = FindObjectsByType<DRPHandler>(FindObjectsSortMode.None);
+            foreach (DRPHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }   
 }

@@ -10,8 +10,22 @@ namespace BlacXGames.Plugins.Uch
     {
         private InputField _inputField;
 
-        private void Awake() => _inputField = GetComponent<InputField>();
-        
+        public void Initialize() => _inputField = GetComponent<InputField>();
+        private void Awake() => Initialize();
         public void SetText(string text) => _inputField.text = text;
+        
+        public static void SetText(IFHandler ifHandler, string text) => ifHandler.SetText(text);
+        
+        public static void InitializeAll()
+        {
+            IFHandler[] imgHandlers = FindObjectsByType<IFHandler>(FindObjectsSortMode.None);
+            foreach (IFHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }    
 }

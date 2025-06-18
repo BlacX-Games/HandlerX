@@ -1,4 +1,3 @@
-using BlacXGames.Plugins.Utilities;
 using UnityEngine;
 
 namespace BlacXGames.Plugins.Uch

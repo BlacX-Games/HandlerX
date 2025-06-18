@@ -9,6 +9,19 @@ namespace BlacXGames.Plugins.Uch
     {
         private RectTransform _rectTransform;
 
-        private void Awake() => _rectTransform = GetComponent<RectTransform>();
+        public void Initialize() => _rectTransform = GetComponent<RectTransform>();
+        private void Awake() => Initialize();
+        
+        public static void InitializeAll()
+        {
+            RTHandler[] imgHandlers = FindObjectsByType<RTHandler>(FindObjectsSortMode.None);
+            foreach (RTHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }
 }

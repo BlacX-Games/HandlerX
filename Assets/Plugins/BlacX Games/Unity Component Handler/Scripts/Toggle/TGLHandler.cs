@@ -11,6 +11,19 @@ namespace BlacXGames.Plugins.Uch
     {
         private Toggle _toggle;
 
-        private void Awake() => _toggle = GetComponent<Toggle>();
+        public void Initialize() => _toggle = GetComponent<Toggle>();
+        private void Awake() => Initialize();
+        
+        public static void InitializeAll()
+        {
+            TGLHandler[] imgHandlers = FindObjectsByType<TGLHandler>(FindObjectsSortMode.None);
+            foreach (TGLHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }   
 }

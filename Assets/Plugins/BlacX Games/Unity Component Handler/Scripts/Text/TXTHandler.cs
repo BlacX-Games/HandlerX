@@ -10,11 +10,24 @@ namespace BlacXGames.Plugins.Uch
     {
         private Text _text;
 
-        private void Awake() => _text = GetComponent<Text>();
-        
+        public void Initialize() => _text = GetComponent<Text>();
+        private void Awake() => Initialize();
         public void SetText(string text) => _text.text = text;
         public void SetColor(Color color) => _text.color = color;
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
+        
+        public static void SetText(TXTHandler txtPHandler, string text) => txtPHandler.SetText(text);
+        public static void SetColor(TXTHandler txtPHandler, Color color) => txtPHandler.SetColor(color);
+        
+        public static void InitializeAll()
+        {
+            IMGHandler[] imgHandlers = FindObjectsByType<IMGHandler>(FindObjectsSortMode.None);
+            foreach (IMGHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }   
 }

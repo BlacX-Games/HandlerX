@@ -10,10 +10,22 @@ namespace BlacXGames.Plugins.Uch
     {
         private Button _button;
 
-        private void Awake() => _button = GetComponent<Button>();
-        
+        public void Initialize() => _button = GetComponent<Button>();
+        private void Awake() => Initialize();
         public void SetInteractable(bool state) => _button.interactable = state;
-        public void Activate() => gameObject.SetActive(true);
-        public void Deactivate() => gameObject.SetActive(false);
+        
+        public static void SetInteractable(BTNHandler btnHandler, bool state) => btnHandler.SetInteractable(state);
+        
+        public static void InitializeAll()
+        {
+            BTNHandler[] imgHandlers = FindObjectsByType<BTNHandler>(FindObjectsSortMode.None);
+            foreach (BTNHandler item in imgHandlers)
+            {
+                if (item != null)
+                {
+                    item.Initialize();
+                }
+            }
+        }
     }   
 }
